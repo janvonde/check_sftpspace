@@ -1,0 +1,18 @@
+name: check_sftpspace
+description: "file:///README.md"
+url: "https://github.com/janvonde/check_sftpspace"
+tags: sftp,ssh,remote,space,df
+vendor: Linux
+target: Operating System
+type: Plugin
+license: gplv3
+releases: 
+  - 
+    name: 1.0
+    description: "1.0 Release"
+    files: 
+      - 
+        name: check_sftpspace.sh
+        url: "file:///check_sftpspace.sh"
+        description: "initial release"
+        checksum: d0241fd279edb6f4f715f10f7f466f30
