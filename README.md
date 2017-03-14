@@ -35,7 +35,7 @@ Replace the variables:
 
 You can define the icinga2 check command as follows:
 ```
-/* Define check command for check_piwik */
+/* Define check command for check_sftpspace */
 object CheckCommand "sftpspace" {
   import "plugin-check-command"
   command = [ PluginDir + "/check_sftpspace.sh" ]
