@@ -22,12 +22,13 @@ See also: http://wiki.hetzner.de/index.php/Backup_Space_SSH_Keys
 ### Usage
 Try the plugin at the command line like this:
 ```
-./check_sftpsace.sh -h [host] -u [user] -w [warn] -c [crit]
+./check_sftpsace.sh -h [host] -u [user] [ -o sftpOpt ] -w [warn] -c [crit]
 ```
 
 Replace the variables:
 * __host__: sftp host to connect to
 * __user__: username at the sftp server
+* __sftpOpt__: extra sftp option, e.g. `port=23`
 * __warn__: percentage of needed minimum free space before warning
 * __crit__: percentage of needed minimum free space before critical
 
@@ -48,6 +49,10 @@ object CheckCommand "sftpspace" {
     "-u" = {
       "required" = true
       "value" = "$ss_user$"
+    }
+    "-o" = {
+      "required" = false
+      "value" = "$ss_sftpOpt$"
     }
     "-w" = {
       "required" = true
